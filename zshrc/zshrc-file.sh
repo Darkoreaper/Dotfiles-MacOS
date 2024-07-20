@@ -105,27 +105,14 @@ create_symlink ~/Github/Dotfiles-MacOS/sketchybar/felixkratz-linkarzu/ ~/.config
 # If you want to open the daily note with a different distro, update the "nvim"
 # symlink, for example you can change it from "neobean" to "lazyvim"
 create_symlink ~/Github/Dotfiles-MacOS/neovim/neobean/ ~/.config/nvim
-# create_symlink ~/github/dotfiles-latest/sketchybar/felixkratz ~/.config/sketchybar
-# create_symlink ~/github/dotfiles-latest/sketchybar/default ~/.config/sketchybar
-# create_symlink ~/github/dotfiles-latest/sketchybar/neutonfoo ~/.config/sketchybar
+# create_symlink ~/Github/Dotfiles-MacOS/sketchybar/felixkratz ~/.config/sketchybar
+# create_symlink ~/Github/Dotfiles-MacOS/sketchybar/default ~/.config/sketchybar
+# create_symlink ~/Github/Dotfiles-MacOS/sketchybar/neutonfoo ~/.config/sketchybar
 # echo "finished 1"
 
 # # This is on the other repo where I keep my ssh config files
 # I commented this as I don't have access to this repo in all the hosts
-# ln -snf ~/github/dotfiles/sshconfig-pers ~/.ssh/config 2>&1 >/dev/null
-
-# I'm keeping the old manual commands here
-# ln -snf ~/github/dotfiles-latest/zshrc/zshrc-file.sh ~/.zshrc >/dev/null 2>&1
-# ln -snf ~/github/dotfiles-latest/vimrc/vimrc-file ~/.vimrc >/dev/null 2>&1
-# ln -snf ~/github/dotfiles-latest/vimrc/vimrc-file ~/github/obsidian_main/.obsidian.vimrc >/dev/null 2>&1
-# ln -snf ~/github/dotfiles-latest/tmux/tmux.conf.sh ~/.tmux.conf >/dev/null 2>&1
-# ln -snf ~/github/dotfiles-latest/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml >/dev/null 2>&1
-# ln -snf ~/github/dotfiles-latest/yabai/yabairc ~/.yabairc >/dev/null 2>&1
-#
-# # Below are symlinks that point to directories
-# ln -snf ~/github/dotfiles-latest/neovim/neobean ~/.config/nvim >/dev/null 2>&1
-# ln -snf ~/github/dotfiles-latest/hammerspoon ~/.hammerspoon >/dev/null 2>&1
-# ln -snf ~/github/dotfiles-latest/karabiner/mxstbr ~/.config/karabiner >/dev/null 2>&1
+# ln -snf ~/Github/Dotfiles-MacOS/sshconfig-pers ~/.ssh/config 2>&1 >/dev/null
 
 # Autocompletion settings
 # https://github.com/Phantas0s/.dotfiles/blob/master/zsh/completion.zsh
