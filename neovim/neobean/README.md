@@ -206,9 +206,9 @@ help command
 - This is the plugin that shows me markdown warnings when the line length is
   exceeded, or headings are not properly used for example
 - To modify the warning settings, copy the following file
-  `~/github/dotfiles-latest/neovim/neobean/.markdownlint.yaml`
+  `~/Github/Dotfiles-MacOS/neovim/neobean/.markdownlint.yaml`
 - To each dir in which you want the settings to be applied, for example, I
-  copied it to my `github/obsidian_main` and `github/linkarzu.github.io` dir.
+  copied it to my `Github/obsidian_main` dir.
 - Copy it to the working directory, you can see it with `:pwd`
 
 ## Fix Mason warnings
