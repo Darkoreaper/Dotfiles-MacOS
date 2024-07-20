@@ -1,4 +1,7 @@
-# Filename: ~/github/dotfiles-latest/zshrc/zshrc-file.sh
+
+
+
+# Filename: ~/Github/Dotfiles-MacOS/zshrc/zshrc-file.sh
 
 # #############################################################################
 # Do not delete the `UNIQUE_ID` line below, I use it to backup original files
@@ -24,7 +27,7 @@ mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/kitty/
 # Creating obsidian directory
 # Even if you don't use obsidian, don't remove this dir to avoid warnings
-mkdir -p ~/github/obsidian_main
+mkdir -p ~/Github/obsidian_main
 
 # Create the symlinks I normally use
 # ~/.config dir holds nvim, neofetch, alacritty configs
@@ -78,30 +81,30 @@ create_symlink() {
 }
 
 # Creating symlinks for files
-create_symlink ~/github/dotfiles-latest/vimrc/vimrc-file ~/.vimrc
-create_symlink ~/github/dotfiles-latest/vimrc/vimrc-file ~/github/obsidian_main/.obsidian.vimrc
-create_symlink ~/github/dotfiles-latest/zshrc/zshrc-file.sh ~/.zshrc
-create_symlink ~/github/dotfiles-latest/bashrc/bashrc-file.sh ~/.bashrc
-create_symlink ~/github/dotfiles-latest/tmux/tmux.conf.sh ~/.tmux.conf
-create_symlink ~/github/dotfiles-latest/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
-create_symlink ~/github/dotfiles-latest/kitty/kitty.conf ~/.config/kitty/kitty.conf
-create_symlink ~/github/dotfiles-latest/yabai/yabairc ~/.yabairc
-create_symlink ~/github/dotfiles-latest/.prettierrc.yaml ~/.prettierrc.yaml
+create_symlink ~/Github/Dotfiles-MacOS/vimrc/vimrc-file ~/.vimrc
+create_symlink ~/Github/Dotfiles-MacOS/vimrc/vimrc-file ~/github/obsidian_main/.obsidian.vimrc
+create_symlink ~/Github/Dotfiles-MacOS/zshrc/zshrc-file.sh ~/.zshrc
+create_symlink ~/Github/Dotfiles-MacOS/bashrc/bashrc-file.sh ~/.bashrc
+create_symlink ~/Github/Dotfiles-MacOS/tmux/tmux.conf.sh ~/.tmux.conf
+create_symlink ~/Github/Dotfiles-MacOS/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
+create_symlink ~/Github/Dotfiles-MacOS/kitty/kitty.conf ~/.config/kitty/kitty.conf
+create_symlink ~/Github/Dotfiles-MacOS/yabai/yabairc ~/.yabairc
+create_symlink ~/Github/Dotfiles-MacOS/.prettierrc.yaml ~/.prettierrc.yaml
 
 # Creating symlinks for directories
-create_symlink ~/github/dotfiles-latest/neovim/neobean/ ~/.config/neobean
-create_symlink ~/github/dotfiles-latest/neovim/quarto-nvim-kickstarter/ ~/.config/quarto-nvim-kickstarter
-create_symlink ~/github/dotfiles-latest/neovim/kickstart.nvim/ ~/.config/kickstart.nvim
-create_symlink ~/github/dotfiles-latest/neovim/lazyvim/ ~/.config/lazyvim
-create_symlink ~/github/dotfiles-latest/hammerspoon/ ~/.hammerspoon
-create_symlink ~/github/dotfiles-latest/karabiner/mxstbr/ ~/.config/karabiner
-create_symlink ~/github/dotfiles-latest/sketchybar/felixkratz-linkarzu/ ~/.config/sketchybar
+create_symlink ~/Github/Dotfiles-MacOS/neovim/neobean/ ~/.config/neobean
+create_symlink ~/Github/Dotfiles-MacOS/neovim/quarto-nvim-kickstarter/ ~/.config/quarto-nvim-kickstarter
+create_symlink ~/Github/Dotfiles-MacOS/neovim/kickstart.nvim/ ~/.config/kickstart.nvim
+create_symlink ~/Github/Dotfiles-MacOS/neovim/lazyvim/ ~/.config/lazyvim
+create_symlink ~/Github/Dotfiles-MacOS/hammerspoon/ ~/.hammerspoon
+create_symlink ~/Github/Dotfiles-MacOS/karabiner/mxstbr/ ~/.config/karabiner
+create_symlink ~/Github/Dotfiles-MacOS/sketchybar/felixkratz-linkarzu/ ~/.config/sketchybar
 # Notice I also have the "nvim" directory below and I have it pointing to my
 # "neobean" config.
 # If I don't do this, my daily note with hyper+t+r won't work
 # If you want to open the daily note with a different distro, update the "nvim"
 # symlink, for example you can change it from "neobean" to "lazyvim"
-create_symlink ~/github/dotfiles-latest/neovim/neobean/ ~/.config/nvim
+create_symlink ~/Github/Dotfiles-MacOS/neovim/neobean/ ~/.config/nvim
 # create_symlink ~/github/dotfiles-latest/sketchybar/felixkratz ~/.config/sketchybar
 # create_symlink ~/github/dotfiles-latest/sketchybar/default ~/.config/sketchybar
 # create_symlink ~/github/dotfiles-latest/sketchybar/neutonfoo ~/.config/sketchybar
@@ -239,7 +242,7 @@ alias coverage='go test -coverprofile=coverage.out && go tool cover -html=covera
 # my latest changes, otherwise your changes will be overriden by my updates
 echo
 echo "Pulling latest changes, please wait..."
-(cd ~/github/dotfiles-latest && git pull >/dev/null 2>&1) || echo "Failed to pull dotfiles"
+(cd ~/Github/Dotfiles-MacOS && git pull >/dev/null 2>&1) || echo "Failed to pull dotfiles"
 # Every time I log into a host I want to pull my github repos, but not cd to that dir
 # So running the command above in a subshell
 #
@@ -329,7 +332,7 @@ if [ "$OS" = 'Mac' ]; then
   # Starship
   # https://starship.rs/config/#prompt
   if command -v starship &>/dev/null; then
-    export STARSHIP_CONFIG=$HOME/github/dotfiles-latest/starship-config/starship.toml
+    export STARSHIP_CONFIG=$HOME/Github/Dotfiles-MacOS/starship-config/starship.toml
     eval "$(starship init zsh)" >/dev/null 2>&1
   fi
 
@@ -511,7 +514,7 @@ if [ "$OS" = 'Linux' ]; then
   install_this_package="yes"
   if command -v starship &>/dev/null; then
     # This is what applies the specific profile
-    export STARSHIP_CONFIG=$HOME/github/dotfiles-latest/starship-config/$starship_file >/dev/null 2>&1
+    export STARSHIP_CONFIG=$HOME/Github/Dotfiles-MacOS/starship-config/$starship_file >/dev/null 2>&1
     eval "$(starship init zsh)" >/dev/null 2>&1
   else
     if [ "$install_this_package" != "no" ]; then
@@ -527,7 +530,7 @@ if [ "$OS" = 'Linux' ]; then
         # After installing, initialize it
         eval "$(starship init zsh)"
         # This is what applies the specific profile
-        export STARSHIP_CONFIG=$HOME/github/dotfiles-latest/starship-config/$starship_file
+        export STARSHIP_CONFIG=$HOME/Github/Dotfiles-MacOS/starship-config/$starship_file
         echo "Starship installed successfully."
       fi
     fi
@@ -536,8 +539,8 @@ if [ "$OS" = 'Linux' ]; then
   # Initialize z.lua, if it is installed
   # If not installed, this will install lua and then z.lua
   install_this_package="no"
-  if command -v $HOME/github/z.lua/z.lua &>/dev/null; then
-    eval "$(lua $HOME/github/z.lua/z.lua --init zsh enhanced once)"
+  if command -v $HOME/Github/z.lua/z.lua &>/dev/null; then
+    eval "$(lua $HOME/Github/z.lua/z.lua --init zsh enhanced once)"
   else
     if [ "$install_this_package" != "no" ]; then
       # First we need to install Lua
@@ -563,20 +566,20 @@ if [ "$OS" = 'Linux' ]; then
 
       # After installing Lua, I need to install z.lua from github
       echo
-      if [ ! -d "$HOME/github/z.lua" ]; then
-        mkdir -p $HOME/github
-        cd $HOME/github
+      if [ ! -d "$HOME/Github/z.lua" ]; then
+        mkdir -p $HOME/Github
+        cd $HOME/Github
         git clone https://github.com/skywind3000/z.lua.git 2>&1 >/dev/null
       fi
 
       # verify if the z.lua github repo was cloned successfully
-      if [ ! -d "$HOME/github/z.lua" ]; then
+      if [ ! -d "$HOME/Github/z.lua" ]; then
         echo -e "${boldgreen}warning: failed to clone the repository. skipping the z.lua configuration....${nocolor}"
         # sleep 1
       else
         echo "successfully cloned the z.lua repository."
         # After installing, initialize it
-        eval "$(lua $HOME/github/z.lua/z.lua --init zsh enhanced once)"
+        eval "$(lua $HOME/Github/z.lua/z.lua --init zsh enhanced once)"
         echo "$LUA_PACKAGE installed successfully."
       fi
     fi
@@ -584,24 +587,24 @@ if [ "$OS" = 'Linux' ]; then
 
   # Source zsh-autosuggestions if file exists
   install_this_package="no"
-  if [ -f "$HOME/github/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
-    source $HOME/github/zsh-autosuggestions/zsh-autosuggestions.zsh
+  if [ -f "$HOME/Github/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+    source $HOME/Github/zsh-autosuggestions/zsh-autosuggestions.zsh
   else
     if [ "$install_this_package" != "no" ]; then
       echo
       echo "Installing zsh-autosuggestions, please wait..."
       # Download github repo
-      mkdir -p $HOME/github
-      cd $HOME/github
+      mkdir -p $HOME/Github
+      cd $HOME/Github
       git clone https://github.com/zsh-users/zsh-autosuggestions 2>&1 >/dev/null
       # Verify if the repo was cloned successfully
-      if [ ! -d "$HOME/github/zsh-autosuggestions" ]; then
+      if [ ! -d "$HOME/Github/zsh-autosuggestions" ]; then
         echo
         echo -e "${boldRed}Warning: Failed to clone the zsh-autosuggestions repository. Check this manually${noColor}"
         # sleep 1
       else
         # After installing, initialize it
-        source $HOME/github/zsh-autosuggestions/zsh-autosuggestions.zsh
+        source $HOME/Github/zsh-autosuggestions/zsh-autosuggestions.zsh
         echo "Successfully installed zsh-autosuggestions"
       fi
     fi
@@ -609,8 +612,8 @@ if [ "$OS" = 'Linux' ]; then
 
   # Initialize zsh-vi-mode, if it is installed
   install_this_package="no"
-  if [ -d "$HOME/github/zsh-vi-mode" ]; then
-    source $HOME/github/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+  if [ -d "$HOME/Github/zsh-vi-mode" ]; then
+    source $HOME/Github/zsh-vi-mode/zsh-vi-mode.plugin.zsh
     # This modifies the escape key
     ZVM_VI_ESCAPE_BINDKEY=kj
     ZVM_VI_INSERT_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
@@ -623,17 +626,17 @@ if [ "$OS" = 'Linux' ]; then
       echo
       echo "Installing zsh-vi-mode, please wait..."
       # Download zsh-vi-mode from github
-      mkdir -p $HOME/github
-      cd $HOME/github
+      mkdir -p $HOME/Github
+      cd $HOME/Github
       git clone https://github.com/jeffreytse/zsh-vi-mode.git 2>&1 >/dev/null
       # Verify if the zsh-vi-mode GitHub repo was cloned successfully
-      if [ ! -d "$HOME/github/zsh-vi-mode" ]; then
+      if [ ! -d "$HOME/Github/zsh-vi-mode" ]; then
         echo
         echo -e "${boldRed}Warning: Failed to clone the zsh-vi-mode repository. Check this manually.${noColor}"
         # sleep 1
       else
         # After installing, initialize it
-        source $HOME/github/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+        source $HOME/Github/zsh-vi-mode/zsh-vi-mode.plugin.zsh
         # This modifies the escape key
         ZVM_VI_ESCAPE_BINDKEY=kj
         ZVM_VI_INSERT_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
@@ -662,16 +665,16 @@ if [ "$OS" = 'Linux' ]; then
       echo
       echo "Installing fzf, please wait..."
       # Download fzf from GitHub if it's not installed
-      mkdir -p $HOME/github
-      cd $HOME/github
+      mkdir -p $HOME/Github
+      cd $HOME/Github
       git clone --depth 1 https://github.com/junegunn/fzf.git 2>&1 >/dev/null
       # Verify if the fzf GitHub repo was cloned successfully
-      if [ ! -d "$HOME/github/fzf" ]; then
+      if [ ! -d "$HOME/Github/fzf" ]; then
         echo -e "${boldRed}Warning: Failed to clone the fzf repository. Check this manually.${noColor}"
       else
         echo "Successfully cloned the fzf repository."
         # Install fzf, this will answer `y`, `y`, and `n` to the questions asked
-        echo -e "y\ny\nn" | $HOME/github/fzf/install 2>&1 >/dev/null
+        echo -e "y\ny\nn" | $HOME/Github/fzf/install 2>&1 >/dev/null
         # After installing, initialize it
         source ~/.fzf.zsh
         echo "Successfully installed fzf"

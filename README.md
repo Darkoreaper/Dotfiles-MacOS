@@ -46,11 +46,6 @@ source ~/.zshrc
 ```
 
 ```bash
-ln -snf ~/github/dotfiles-latest/zshrc/zshrc-file.sh ~/.zshrc >/dev/null 2>&1
-source ~/.zshrc
-```
-
-```bash
 # This is on the other repo where I keep my ssh config files
 ln -snf ~/github/dotfiles/sshconfig-pers ~/.ssh/config >/dev/null 2>&1
 ```
