@@ -87,7 +87,7 @@ if [ "$OS" = 'Mac' ]; then
   # Starship
   # https://starship.rs/config/#prompt
   if command -v starship &>/dev/null; then
-    export STARSHIP_CONFIG=$HOME/github/dotfiles-latest/starship-config/starship.toml
+    export STARSHIP_CONFIG=$HOME/Github/Dotfiles-MacOSs/starship-config/starship.toml
     eval "$(starship init bash)" >/dev/null 2>&1
   fi
 
