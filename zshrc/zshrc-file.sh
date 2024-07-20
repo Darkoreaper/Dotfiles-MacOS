@@ -1,6 +1,5 @@
-
-
-
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # Filename: ~/Github/Dotfiles-MacOS/zshrc/zshrc-file.sh
 
 # #############################################################################
@@ -213,12 +212,7 @@ alias kgpo='kubectl get pods -o wide'
 # golang aliases
 alias coverage='go test -coverprofile=coverage.out && go tool cover -html=coverage.out'
 
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 export PATH="/usr/local/opt/curl/bin:$PATH"
-
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 
 export PATH=$PATH:/path/to/vscode
 
@@ -778,3 +772,6 @@ if [ "$OS" = 'Linux' ]; then
     source <(kubectl completion zsh)
   fi
 fi
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
