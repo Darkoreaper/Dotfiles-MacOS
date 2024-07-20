@@ -4,12 +4,12 @@
 # UNIQUE_ID=do_not_delete_this_line
 # #############################################################################
 
-# import = ["~/github/dotfiles-latest/alacritty/themes/dracula/dracula.toml"]
-# import = ["~/github/dotfiles-latest/alacritty/themes/catppuccin/catppuccin-mocha.toml"]
-# import = ["~/github/dotfiles-latest/alacritty/themes/catppuccin/catppuccin-macchiato.toml"]
-# import = ["~/github/dotfiles-latest/alacritty/themes/catppuccin/catppuccin-frappe.toml"]
-# import = ["~/github/dotfiles-latest/alacritty/themes/catppuccin/catppuccin-latte.toml"]
-import = ["~/github/dotfiles-latest/alacritty/themes/eldritch/eldritch.toml"]
+# import = ["~/Github/Dotfiles-MacOS/alacritty/themes/dracula/dracula.toml"]
+# import = ["~/Github/Dotfiles-MacOS/alacritty/themes/catppuccin/catppuccin-mocha.toml"]
+# import = ["~/Github/Dotfiles-MacOS/alacritty/themes/catppuccin/catppuccin-macchiato.toml"]
+# import = ["~/Github/Dotfiles-MacOS/alacritty/themes/catppuccin/catppuccin-frappe.toml"]
+# import = ["~/Github/Dotfiles-MacOS/alacritty/themes/catppuccin/catppuccin-latte.toml"]
+import = ["~/Github/Dotfiles-MacOS/alacritty/themes/eldritch/eldritch.toml"]
 
 
 [colors]
