@@ -158,7 +158,6 @@ const rules: KarabinerRules[] = [
       k: open("raycast://extensions/google-search/index"),
       l: open("raycast://extensions/KevinBatdorf/obsidian/searchNoteCommand"),
       semicolon: open("raycast://extensions/vishaltelangre/google-drive/index"),
-      quote: open("raycast://extensions/mathieudutour/wolfram-alpha/index"),
       y: open(
         "raycast://extensions/tonka3000/youtube/search-videos?arguments=%7B%22query%22%3A%22%22%7D"
       ),
