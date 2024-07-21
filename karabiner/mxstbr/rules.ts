@@ -25,59 +25,13 @@ const rules: KarabinerRules[] = [
         ],
         type: "basic",
       },
-      //      {
-      //        type: "basic",
-      //        description: "Disable CMD + Tab to force Hyper Key usage",
-      //        from: {
-      //          key_code: "tab",
-      //          modifiers: {
-      //            mandatory: ["left_command"],
-      //          },
-      //        },
-      //        to: [
-      //          {
-      //            key_code: "tab",
-      //          },
-      //        ],
-      //      },
     ],
   },
 
-  // I couldn't get this work with the magic mouse because it only detects button1 in the karabiner event viewer
-  // You need to enable pro mode in karabiner for the work with the apple mouse
-  // It works with the logitech mouse tough
-  // {
-  //   description: "Simultaneous Left and Right Click to Cmd+Shift+S",
-  //   manipulators: [
-  //     {
-  //       type: "basic",
-  //       parameters: {
-  //         "basic.simultaneous_threshold_milliseconds": 500
-  //       },
-  //       from: {
-  //         simultaneous: [
-  //           { "pointing_button": "button1" },
-  //           { "pointing_button": "button2" }
-  //         ],
-  //         simultaneous_options: {
-  //           detect_key_down_uninterruptedly: true,
-  //           key_down_order: "strict",
-  //           key_up_order: "strict",
-  //           key_up_when: "all"
-  //         }
-  //       },
-  //       to: [
-  //         {
-  //           key_code: "s",
-  //           modifiers: ["left_command", "left_shift"]
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+  // Define the sublayers of the Hyper key
 
   ...createHyperSubLayers({
-    // I use spacebar as the app launcher
+   
     spacebar: {
       h: app("Spotify"),
       // j: app("Alacritty"),
@@ -96,14 +50,6 @@ const rules: KarabinerRules[] = [
       r: app("Microsoft Remote Desktop"),     
       v: app("zoom.us"),
 
-      // Below I'm just leaving comments of the shortcuts I specifically use on
-      // apps in case I need to configure them on a new computer
-      // hyper+w - paste activate
-      // hyper+1 - paste stack
-      // hyper+0 - cleanshot x capture area
-      // hyper+9 - cleanshot x capture previous area
-      // hyper+p - cleanshot x OCR
-      // hyper+` - cleanshot x record screen
       // hyper+2 - betterdisplay fav res 1
       // hyper+3 - betterdisplay fav res 2
     },
@@ -209,7 +155,7 @@ const rules: KarabinerRules[] = [
     // r = "Raycast"
     r: {
       j: open("raycast://extensions/lardissone/raindrop-io/search"),
-      k: open("raycast://extensions/mblode/google-search/index"),
+      k: open("raycast://extensions/google-search/index"),
       l: open("raycast://extensions/KevinBatdorf/obsidian/searchNoteCommand"),
       semicolon: open("raycast://extensions/vishaltelangre/google-drive/index"),
       quote: open("raycast://extensions/mathieudutour/wolfram-alpha/index"),
@@ -225,20 +171,20 @@ const rules: KarabinerRules[] = [
 
     // s = "System" or "Service"
     s: {
-      j: {
-        to: [
-          {
-            key_code: "volume_decrement",
-          },
-        ],
-      },
-      k: {
-        to: [
-          {
-            key_code: "volume_increment",
-          },
-        ],
-      },
+      //j: {
+      //   to: [
+      //     {
+      //      key_code: "volume_decrement",
+      //    },
+      //  ],
+      //},
+      //k: {
+      //  to: [
+      //    {
+      //      key_code: "volume_increment",
+      //    },
+      //  ],
+      //},
       // Move to left tab in browsers
       h: {
         to: [
@@ -336,58 +282,6 @@ const rules: KarabinerRules[] = [
       9: open(
         "btt://execute_assigned_actions_for_trigger/?uuid=762AF6E2-41EE-4B74-A2D3-9B96C3D777B5"
       ),
-      // comma: {
-      //   to: [
-      //     {
-      //       shell_command: `/opt/homebrew/bin/SwitchAudioSource -s "LG TV"; /opt/homebrew/bin/SwitchAudioSource -t input -s "C922 Pro Stream Webcam"`,
-      //     },
-      //   ],
-      // },
-      // Change audio source to mac mini
-      comma: {
-        to: [
-          {
-            shell_command: `/opt/homebrew/bin/SwitchAudioSource -s "Mac mini Speakers"; /opt/homebrew/bin/SwitchAudioSource -t input -s "C922 Pro Stream Webcam"`,
-          },
-        ],
-      },
-      // Change audio source to macbook pro Speakers
-      period: {
-        to: [
-          {
-            shell_command: `/opt/homebrew/bin/SwitchAudioSource -s "MacBook Pro Speakers"; /opt/homebrew/bin/SwitchAudioSource -t input -s "MacBook Pro Microphone"`,
-          },
-        ],
-      },
-      // n: open(
-      //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-      // ),
-    },
-
-    // For betterTouchTool
-    d: {
-      // Select text from alacritty
-      j: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=5A708885-4D65-465C-B87A-996BA6C23B86"
-      ),
-      // Paste alacritty text and go down
-      k: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=5AF2559D-E6C9-4665-8D06-2CAF35B1AB07"
-      ),
-      // Paste alacritty text and go up
-      l: open(
-        // This one is working great
-        // paste alacritty go up LESS DELAY
-        "btt://execute_assigned_actions_for_trigger/?uuid=E46BB0D5-F67F-46D5-850C-197337EB26E3"
-      ),
-      // Reboot router
-      u: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=EA461EE0-4C15-4113-93B6-07C12086FF1F"
-      ),
-      // Test ping
-      hyphen: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=EADC365D-0747-4E8F-ACB6-79564FEF1410"
-      ),
     },
 
     // shift+arrows to select stuff
@@ -424,14 +318,6 @@ const rules: KarabinerRules[] = [
           { key_code: "right_arrow", modifiers: ["left_shift", "left_option"] },
         ],
       },
-      // // Magicmove via homerow.app
-      // m: {
-      //   to: [{ key_code: "f", modifiers: ["right_control"] }],
-      // },
-      // // Scroll mode via homerow.app
-      // s: {
-      //   to: [{ key_code: "j", modifiers: ["right_control"] }],
-      // },
     },
 
     // copy, paste and other stuff
@@ -457,34 +343,6 @@ const rules: KarabinerRules[] = [
         ],
       },
     },
-
-    // // 'e' for extra tools
-    // e: {
-    //   // To edit the contents of an excel cell
-    //   u: {
-    //     to: [{ key_code: "f2" }],
-    //   },
-    //   // Focus outline in obsidian
-    //   o: {
-    //     to: [{ key_code: "x", modifiers: ["left_command", "left_shift"] }],
-    //   },
-    //   // Increase LG TV volume
-    //   k: {
-    //     to: [
-    //       {
-    //         shell_command: `~/opt/lgtv/bin/python3 ~/opt/lgtv/bin/lgtv MyTV volumeUp ssl`,
-    //       },
-    //     ],
-    //   },
-    //   // Decrease LG TV volume
-    //   j: {
-    //     to: [
-    //       {
-    //         shell_command: `~/opt/lgtv/bin/python3 ~/opt/lgtv/bin/lgtv MyTV volumeDown ssl`,
-    //       },
-    //     ],
-    //   },
-    // },
 
     // ALWAYS LEAVE THE ONES WITHOUT ANY SUBLAYERS AT THE BOTTOM
     // Vim nagivation
